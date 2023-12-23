@@ -1,0 +1,10 @@
+input {
+    margin-top: 0.4rem;
+    padding: 0.5rem 4rem 0.5rem 1rem;
+    border: #bb65ff 0.12rem solid;
+    border-radius: 2rem;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    min-width: fit-content;
+}

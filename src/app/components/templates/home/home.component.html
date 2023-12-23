@@ -1,0 +1,18 @@
+<header [class.hidden]="!isCreatingMatch()">
+    <app-navbar/>
+</header>
+<main>
+    <section [class.hidden]="isCreatingMatch()">
+        <div class="logo_container">
+            <app-logo logoUrl="assets/images/pragma.png" logoAlt="Logo principal" logoClass="main_logo" />
+            <app-logo logoUrl="assets/images/pragma-logo.png" logoAlt="Logo secundario" logoClass="second_logo" />
+        </div>
+        <div class="button_container">
+            <app-button buttonText="Crear partida" buttonClass="button_primary"
+                (eventListened)="createMatch()"></app-button>
+        </div>
+    </section>
+    <section [class.hidden]="!isCreatingMatch()">
+            <app-form />
+    </section>
+</main>

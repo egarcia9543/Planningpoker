@@ -1,0 +1,79 @@
+app-logo {
+    display: flex;
+    justify-content: center;
+}
+
+app-button {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.logo_container {
+    animation: slideFromAbove 1s ease-in-out forwards;
+}
+
+.button_container {
+    margin-top: 0.75rem;
+    animation: slideFromBelow 1s ease-in-out forwards;
+}
+
+.hidden {
+    display: none;
+    animation: fadeOut 1s ease-in-out forwards;
+}
+
+section{
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slideFromAbove {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromBelow {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
