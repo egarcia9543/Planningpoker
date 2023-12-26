@@ -3,6 +3,7 @@ import { LabelComponent } from '../../atoms/label/label.component';
 import { InputComponent } from '../../atoms/input/input.component';
 import { ButtonComponent } from '../../atoms/button/button.component';
 import { FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -12,6 +13,7 @@ import { FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './form.component.css'
 })
 export class FormComponent {
+  constructor(private router: Router) {}
 
   checkForm = new FormControl('', {
     nonNullable: true,
@@ -20,15 +22,10 @@ export class FormComponent {
       Validators.minLength(5),
       Validators.maxLength(20),
       Validators.pattern('(?!^d+$)(?!.*[()_,.*#/-])(?:[^0-9]*[0-9]){0,3}[^0-9]*')
-
     ]
   });
 
-  formValidation() {
-    if (this.checkForm.valid) {
-      console.log('Form is valid');
-    } else {
-      console.log('Form is invalid');
-    }
+  createMatch() {
+    this.router.navigateByUrl(`/table/${this.checkForm.value}`);
   }
 }

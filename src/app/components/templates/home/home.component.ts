@@ -15,7 +15,6 @@ export class HomeComponent {
   isCreatingMatch = signal<boolean>(false);
 
   createMatch() {
-    console.log('creating match');
     this.isCreatingMatch.set(true);
   }
 }

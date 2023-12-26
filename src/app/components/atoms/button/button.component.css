@@ -5,4 +5,5 @@
 .button_primary:hover {
     background-color: #6429cd;
     color: #fff;
+    cursor: pointer;
 }

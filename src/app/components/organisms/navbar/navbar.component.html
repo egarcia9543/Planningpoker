@@ -1,6 +1,10 @@
-<nav>
+<nav [class]="location">
     <a href="/">
         <app-logo logoUrl="assets/images/pragma.png" logoAlt="Logo Navbar" logoClass="nav_logo" logoWidth="100" logoHeight="100"/>
     </a>
-    <app-title text="Crear partida"/>
+    <app-title [text]="title"/>
+    <div>
+        <p>{{initials}}</p>
+        <button>Invitar jugadores</button>
+    </div>
 </nav>

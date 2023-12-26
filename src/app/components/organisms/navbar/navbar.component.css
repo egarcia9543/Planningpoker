@@ -1,6 +1,38 @@
-nav {
+nav.home {
     display: flex;
     justify-content: start;
     align-items: center;
     position: absolute;
+}
+
+nav.home div {
+    display: none;
+}
+
+nav.table {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+nav.table div {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+nav.table div p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    background-color: #bdbdff;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    padding: 0;
+    color: #340273;
+    font-weight: bold;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LogoComponent } from '../../atoms/logo/logo.component';
 import { ButtonComponent } from '../../atoms/button/button.component';
 import { TitleComponent } from '../../atoms/title/title.component';
@@ -11,5 +11,7 @@ import { TitleComponent } from '../../atoms/title/title.component';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  @Input() location: string = '';
+  @Input() title: string = '';
+  @Input() initials: string = '';
 }

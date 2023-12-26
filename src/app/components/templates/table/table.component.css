@@ -1,0 +1,19 @@
+.user_signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.modal_container {
+    width: 35%;
+    height: 30%;
+    background-color: #1f0d3f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #a962e8 solid 0.1rem;
+    border-radius: 1rem;
+}
