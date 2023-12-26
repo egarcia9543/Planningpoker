@@ -9,3 +9,33 @@
     flex-direction: column;
     margin-bottom: 2rem;
 }
+
+input {
+  margin-top: 0.4rem;
+  padding: 0.5rem 4rem 0.5rem 1rem;
+  border: #bb65ff 0.12rem solid;
+  border-radius: 2rem;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  min-width: fit-content;
+}
+
+.active:hover {
+  background-color: #6429cd;
+  color: #fff;
+}
+
+.disabled {
+    background-color: #fff;
+    color: #380971;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.disabled:hover {
+    background-color: #fff;
+    color: #380971;
+    opacity: 0.5;
+    cursor: not-allowed;
+}

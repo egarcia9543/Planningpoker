@@ -1,7 +1,11 @@
 <div class="form_container">
+  <form>
     <div class="form_fields">
-        <app-label labelFor="match_game" labelText="Nombra la partida"/>
-        <app-input inputType="text" inputId="match_game"/>
+      <app-label labelFor="match_game" labelText="Nombra la partida"/>
+      <input type="text" [formControl]="checkForm" (input)="formValidation()">
+      <!-- <app-input inputType="text" inputId="match_game"/> -->
     </div>
-    <app-button buttonText="Crear partida" buttonClass="button_primary"/>
+    <!-- <app-button buttonText="Crear partida" buttonClass="button_primary" [disabled]="!checkForm.valid" buttonType="submit"/> -->
+    <button type="submit" class="button_primary" [disabled]="!checkForm.valid" [class.active]="checkForm.valid">Crear partida</button>
+  </form>
 </div>
