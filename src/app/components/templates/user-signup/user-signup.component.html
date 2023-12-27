@@ -2,7 +2,7 @@
     <form>
         <div class="form_fields">
             <app-label labelFor="match_game" labelText="Tu nombre"/>
-            <input type="text" formControlName="signupForm" />
+            <input type="text"/>
         </div>
         <div class="form_radios">
             <div>
@@ -16,4 +16,4 @@
         </div>
         <button type="submit" class="button_primary" [disabled]="!signupForm.valid" [class.active]="signupForm.valid">Crear partida</button>
     </form>
-</div>  
+</div>

@@ -1,1 +1,7 @@
-<p>card works!</p>
+<div class="cardrow">
+  @for (card of cards; track $index) {
+    <p class="card_container">
+      {{card}}
+    </p>
+  }
+</div>

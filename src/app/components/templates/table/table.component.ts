@@ -3,11 +3,12 @@ import { NavbarComponent } from '../../organisms/navbar/navbar.component';
 import { ActivatedRoute } from '@angular/router';
 import { UserSignupComponent } from '../user-signup/user-signup.component';
 import { FormComponent } from '../../molecules/form/form.component';
+import { CardComponent } from '../../atoms/card/card.component';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [NavbarComponent, UserSignupComponent, FormComponent],
+  imports: [NavbarComponent, UserSignupComponent, FormComponent, CardComponent],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
