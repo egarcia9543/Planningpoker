@@ -4,7 +4,9 @@
     </a>
     <app-title [text]="title"/>
     <div>
-        <p>{{initials}}</p>
+        @if (initials !== '') {
+            <p>{{initials}}</p>
+        }
         <button>Invitar jugadores</button>
     </div>
 </nav>

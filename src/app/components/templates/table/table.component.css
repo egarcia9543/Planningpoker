@@ -60,6 +60,99 @@
 }
 
 app-card {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card_label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: 700;
+}
+
+.player {
+    color: #fff;
+    font-weight: 700;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_fields {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.form_radios {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form_radios div {
+    display: flex;
+    align-items: center;
+}
+
+
+input[type="text"] {
+    margin-top: 0.4rem;
+    padding: 0.5rem 4rem 0.5rem 1rem;
+    border: #bb65ff 0.12rem solid;
+    border-radius: 2rem;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    min-width: fit-content;
+}
+
+input[type="radio"] {
+    appearance: none;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+    width: 1rem;
+    height: 1rem;
+    border: #bb65ff 0.1rem solid;
+    border-radius: 100%;
+    background-color: #380971;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    border: #bb65ff 0.1rem solid;
+    background-color: #bb65ff;
+}
+
+.active:hover {
+    background-color: #6429cd;
+    color: #fff;
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: #fff;
+    color: #380971;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
 }

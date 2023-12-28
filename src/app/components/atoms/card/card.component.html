@@ -1,7 +1,13 @@
 <div class="cardrow">
-  @for (card of cards; track $index) {
-    <p class="card_container">
-      {{card}}
-    </p>
+  @for (card of cards; track card; let i = $index) {
+    @if (card == chosenCard) {
+      <p class="card_container chosen"  (click)="cardClick(i)">
+        {{card}}
+      </p>
+    } @else {
+      <p class="card_container"  (click)="cardClick(i)">
+        {{card}}
+      </p>
+    }
   }
 </div>

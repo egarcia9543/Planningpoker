@@ -6,7 +6,7 @@
   position: absolute;
   bottom: 0;
   width: 70%;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .card_container {
@@ -21,7 +21,7 @@
   font-weight: 700;
 }
 
-.card_container:hover {
+.card_container:hover, .chosen {
   cursor: pointer;
   background-color: #e2a4ff;
   transform: translateY(-10%);

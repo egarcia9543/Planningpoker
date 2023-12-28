@@ -1,0 +1,31 @@
+.right_cards {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 73%;
+    transform: translate(-50%, -50%);
+}
+
+.user_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    border: #985acd solid 0.1rem;
+    border-radius: 0.5rem;
+    width: 2rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.4rem;
+}
+
+.player {
+    color: #fff;
+    font-weight: 700;
+}

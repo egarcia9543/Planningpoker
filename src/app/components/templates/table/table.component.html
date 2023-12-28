@@ -1,4 +1,16 @@
-<app-navbar location="table" [title]="tableName()" />
+@if (!isAdminReady()) {
+  <app-navbar location="table" [title]="tableName()"/>
+} @else { 
+  <app-navbar location="table" [title]="tableName()" [initials]="initials()"/>
+}
+
+@if (isAdminReady()) {
+  <app-top-cards />
+  <app-right-card />
+  <app-bottom-cards />
+  <app-left-card />
+}
+
 <div class="board_container">
   <div class="inner_board">
     <div class="center_board">
@@ -6,10 +18,34 @@
     </div>
   </div>
 </div>
-<app-card/>
-<div class="user_signup">
-  <div class="modal_container">
-    <app-user-signup />
+
+@if (!isSpectator()) {
+<div>
+  <p class="card_label">Elige una carta 👇</p>
+  <app-card />
+</div>
+}
+<div [class.user_signup]="!isAdminReady()">
+  <div class="modal_container" [class.hidden]="isAdminReady()">
+    <div class="form_container">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit">
+        <div class="form_fields">
+          <app-label labelFor="username" labelText="Tu nombre" />
+          <input type="text" formControlName="username" />
+        </div>
+        <div class="form_radios">
+          <div>
+            <app-label labelFor="player" labelText="Jugador" />
+            <input type="radio" id="player" name="playerType" value="player" formControlName="playerType">
+          </div>
+          <div>
+            <app-label labelFor="spectator" labelText="Espectador" />
+            <input type="radio" id="spectator" name="playerType" value="spectator" formControlName="playerType">
+          </div>
+        </div>
+        <button type="submit" class="button_primary" [disabled]="!signupForm.valid" [class.active]="signupForm.valid"
+          (click)="onSubmit()">Crear partida</button>
+      </form>
+    </div>
   </div>
 </div>
-
